@@ -1,11 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Players</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Players</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
+
+<body class="bg-light text-black">
+  <div class="container-fluid">
+
+
+        <nav class="navbar navbar-expand-sm navbar-custom shadow-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="photos/BWF.jpg" alt="Logo">
+          <span class="ms-2 fw-bold">Badminton Hub</span>
+        </a>
+
+        
+
+        
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link " href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="events.html">History</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="players.html"> <strong>Players</strong></a>
+            </li>
+          </ul>
+
+      </div>
+    </nav>
+
+   
+    <section class="py-5">
+      <div class="container">
+        <h1 class="text-center mb-4" style="text-decoration: underline #e1ad01;">
+          Legendary Players
+        </h1>
+        <div class="row g-4">
+      
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img src="photos/Lin_Dan.jpg" class="player-img"  />
+              <div class="card-body">
+                <h5 class="card-title">Lin Dan</h5>
+                <p class="card-text mb-1"><strong>Country:</strong> China</p>
+                <p class="card-text mb-1"><strong>Awards:</strong> 2x Olympic Gold, 5x World Champion</p>
+                <p class="card-text mb-0"><strong>Playstyle:</strong> Aggressive, powerful, clutch in big moments.</p>
+              </div>
+            </div>
+          </div>
+
+       
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img src="photos/Lee_Chong_Wei.jpg" class="player-img"  />
+              <div class="card-body">
+                <h5 class="card-title">Lee Chong Wei</h5>
+                <p class="card-text mb-1"><strong>Country:</strong> Malaysia</p>
+                <p class="card-text mb-1"><strong>Awards:</strong> 3x Olympic Silver, 69+ World Tour titles</p>
+                <p class="card-text mb-0"><strong>Playstyle:</strong> Lightning fast, insane defense, precise attack.</p>
+              </div>
+            </div>
+          </div>
+
+         
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm">
+              <img src="photos/victor_axelson.webp" class=" player-img"  />
+              <div class="card-body">
+                <h5 class="card-title">Victor Axelson</h5>
+                <p class="card-text mb-1"><strong>Country:</strong>Denmark</p>
+                <p class="card-text mb-1"><strong>Awards:</strong> 2x Olympic gold medalist and #1 player</p>
+                <p class="card-text mb-0"><strong>Playstyle:</strong> Deceptive, creative, ridiculous power.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+      
+    <section class="py-5 bg-white">
+      <div class="container">
+        <h2 class="text-center mb-4" style="text-decoration: underline #e1ad01;">
+          Create Your Own Player Profile
+        </h2>
+
+        <div class="row g-4">
+          
+          <div class="col-12 col-md-4">
+            <div class="card h-100 shadow-sm my-player-card">
+              <img
+                src="photos/faceless_player.jpg"
+
+                class="card-img-top"
+              />
+              <div class="card-body">
+                
+                <h5 class="card-title mb-2" id="display-name"></h5>
+
+                <p class="mb-1">
+                  <strong>Age:</strong> <span id="display-age"></span>
+                </p>
+
+                <p class="mb-1">
+                  <strong>Country:</strong> <span id="display-country"></span>
+                </p>
+
+                <p class="mb-1">
+                  <strong>Playstyle:</strong> <span id="display-playstyle"></span>
+                </p>
+
+                <p class="mb-1">
+                  <strong>Gear:</strong> <span id="display-gear"></span>
+                </p>
+
+                <p class="mb-1"><strong>Awards:</strong></p>
+                <p id="display-awards" class="small text-muted mb-2"></p>
+
+                <p class="mb-1"><strong>Favorite Shot:</strong></p>
+                <p id="display-favshot" class="small text-muted mb-0"></p>
+              </div>
+            </div>
+          </div>
+
+        
+          <div class="col-12 col-md-8">
+           
+            <form id="player-form" class="card shadow-sm p-3 p-md-4">
+              <h5 class="mb-3">Tell Us About Your Game</h5>
+
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" id="name" class="form-control" placeholder="Your full name" />
+                </div>
+
+                <div class="col-md-3">
+                  <label for="age" class="form-label">Age</label>
+                  <input type="number" id="age" class="form-control" min="5" max="99" />
+                </div>
+
+                <div class="col-md-3">
+                  <label for="country" class="form-label">Country</label>
+                  <input type="text" id="country" class="form-control" placeholder="e.g. USA" />
+                </div>
+
+                <div class="col-md-6">
+                  <label for="playstyle" class="form-label">Playstyle</label>
+                  <select id="playstyle" class="form-select">
+                    <option value="">Select one...</option>
+                    <option>Attacking / Smash-heavy</option>
+                    <option>Defensive / Counter-attack</option>
+                    <option>All-round</option>
+                    <option>Net &amp; front-court specialist</option>
+                    <option>Control / Rally player</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="gear" class="form-label">Gear (Racket, Shoes, Strings)</label>
+                  <input
+                    type="text"
+                    id="gear"
+                    class="form-control"
+                    placeholder="e.g. Astrox 100ZZ, Aerobite, Yonex 65Z"/>
+                </div>
+
+                <div class="col-12">
+                  <label for="awards" class="form-label">Awards / Achievements</label>
+                  <textarea
+                    id="awards"
+                    class="form-control"
+                    rows="3"
+                    placeholder="School tournaments, local clubs, personal milestones...">
+                </textarea>
+                </div>
+
+                <div class="col-12">
+                  <label for="favshot" class="form-label">Favorite Shot</label>
+                  <input
+                    type="text"
+                    id="favshot"
+                    class="form-control"
+                    placeholder="Cross-court net, backhand smash, jump smash..."/>
+                </div>
+              </div>
+
+              <div class="mt-4 d-flex gap-2">
+                <button type="button" id="update-card" class="btn">
+                  Update My Player Card
+                </button>
+
+                <button type="button" id="reset-card" class="btn">
+                  Reset
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+   
+
+ <footer class="py-5 text-light">
+  <div class="container">
+<div class="container">
+        <div class="row g-4">
+          <div class="col-md-4">
+            <h5>Badminton Hub</h5>
+            <p>Exploring the history, culture, and excitement of badminton.</p>
+            <p>From community courts to world championships.</p>
+          </div>
+          <div class="col-md-4">
+            <h5>Explore</h5>
+            <ul class="list-unstyled">
+              <li><a class="text-light text-decoration-none" href="index.html">History</a></li>
+              <li><a class="text-light text-decoration-none" href="events.html">Major Events</a></li>
+              <li><a class="text-light text-decoration-none" href="players.html">Players</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <h5>Get Involved</h5>
+            <p>Find a local club, pick up a racket, and write the next chapter of badminton’s story.</p>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <small>&copy; Badminton Hub  Inspired by the BWF</small>
+        </div>
+        </div>
+  </div>
+</footer>
+
+
     
+   <script>
+
+var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+</script>
+
+  <script src="scripts/scripts.js"></script>
 </body>
 </html>
+ 
+
+    

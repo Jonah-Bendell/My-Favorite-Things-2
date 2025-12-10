@@ -1,24 +1,89 @@
-nav{
-margin-bottom: 20px;
+
+.navbar-custom {
+  background: linear-gradient(90deg,  #d5243f,#e1ad01) ; 
+
 }
 
-nav li{
-    margin: 20px;
+.navbar-custom .navbar-brand img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
 }
+
+.navbar-custom .navbar-brand span {
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  font-size: 1.05rem;
+}
+
+.navbar-custom .nav-link {
+  color: #e9f7ff;
+  margin-inline: 0.6rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  position: relative;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+/* simple underline hover */
+.navbar-custom .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background-color: #ffffff;
+  transition: width 0.2s ease;
+}
+
+
+
+
+
+
+
+
+nav {
+  margin-bottom: 20px;
+}
+
+
+.media {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.menu-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+
 
 .overlay {
   position: absolute;
-  inset: 0;
-  background: rgba(8, 3, 8, 0.411);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 3, 8, 0.45);
   display: flex;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   opacity: 0;
   transform: translateY(4%);
-  transition: opacity .25s ease, transform .25s ease;
+  transition: opacity 0.25s ease, transform 0.25s ease;
   z-index: 1;
-  border-radius: 20px;
 }
 
 .media:hover .overlay {
@@ -30,7 +95,68 @@ nav li{
   color: #fff;
   font-size: 18px;
   font-weight: 700;
-  padding: .5rem .85rem;
-  background: rgba(255, 0, 195, 0.517);
-  border-radius: .5rem;
+  padding: 0.5rem 0.85rem;
+  background: rgba(0, 196, 140, 0.8);
+  border-radius: 0.5rem;
+}
+
+
+footer{
+
+  background-color: #d5243f;    
+  
+}
+
+/* ROW SPACING */
+section .row.g-4 {
+  margin-top: 20px;
+}
+
+
+
+
+
+/* TITLE UNDER IMAGE */
+.news-title {
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #d5243f;          /* reddish like the example */
+  line-height: 1.25;
+}
+
+/* DATE TEXT */
+.news-date {
+  font-size: 0.95rem;
+  color: #777;
+  margin-bottom: 0;
+}
+
+
+/* Wrap image so overflow is hidden (important for zoom effect) */
+.news-card {
+  overflow: hidden;
+  border-radius: 6px;     /* optional: smooth corners */
+}
+
+/* Image base style */
+.news-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;   /* smooth zoom animation */
+}
+
+/* Zoom effect on hover */
+.news-card:hover .news-img {
+  transform: scale(1.08);   /* slight zoom */
+}
+
+.player-img{
+
+  height: 300px;
+  width: 415px;
+
 }
